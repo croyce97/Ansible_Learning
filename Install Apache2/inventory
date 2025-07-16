@@ -1,0 +1,17 @@
+mail.example.com
+localhost   ansible_connection=local
+
+[server1]
+192.168.232.110 ansible_user=canhnq  ansible_password=canhnq  ansible_become_pass=canhnq
+
+[server2]
+192.168.232.111 ansible_user=canhnq  ansible_password=canhnq  ansible_become_pass=canhnq
+
+
+[webservers]
+foo.example.com
+bar.example.com
+
+[dbservers:children]
+server1
+server2
