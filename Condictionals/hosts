@@ -1,0 +1,19 @@
+[docker]
+db1 ansible_host=192.168.232.111 ansible_user=canhnq ansible_become_pass=canhnq
+
+[web]
+web1 ansible_host=192.168.232.113 ansible_user=canhnq ansible_password=canhnq ansible_become_pass=canhnq
+
+[db]
+localhost ansible_connection=local
+db1 ansible_host=192.168.232.111 ansible_user=canhnq ansible_become_pass=canhnq
+#web1 ansible_host=192.168.232.113 ansible_user=canhnq ansible_password=canhnq ansible_become_pass=canhnq
+
+
+[server:children]
+web
+db
+
+[db:vars]
+ntp_server=ntp.atlanta.example.com
+proxy=proxy.atlanta.example.com
