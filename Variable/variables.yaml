@@ -3,7 +3,7 @@
   hosts: localhost
   vars:
     # Key-value Variable
-    Ten: Nguyen van huan
+    Ten: Nguyen Quang Canh
 
     # List Variable
     packages:
