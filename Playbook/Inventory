@@ -1,0 +1,9 @@
+[web]
+web1 ansible_host=192.168.232.111 ansible_user=canhnq ansible_password=canhnq ansible_become_pass=canhnq
+
+[db]
+db1 ansible_host=192.168.232.113 ansible_user=canhnq ansible_become_pass=canhnq
+
+[server:children]
+web
+db
